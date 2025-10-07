@@ -12,3 +12,4 @@ c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\refint\Observator
 c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.pdb
 c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.genruntimeconfig.cache
 c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\ref\Observator.dll
+C:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.sourcelink.json

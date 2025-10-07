@@ -1,27 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Observator
 {
-    
+    // mentine temp in [20, 22]
     internal class Calorifer
     {
         bool pornit = false;
-
-        public void power(bool on)
+        string nume;
+        public Calorifer(string n) {nume = n;}
+        private void power(bool on)
         {
-            Console.WriteLine($"Caloriferul este {(on ? "pornit" : "oprit")}.");
+            pornit = on;
+            Console.WriteLine($"Caloriferul {nume} se {(on ? "porneste" : "opreste")}");
         }
-        
-        public void handler(int temperatura)
-        {
-            Console.WriteLine($"Caloriferul a primit temperatura de {temperatura} grade.");
 
-            if (temperatura < 20)
+        public void handle(int temp)
+        {
+
+            Console.WriteLine($"Caloriferul {nume} a primit temp {temp}");
+
+            if (temp < 20)
             {
                 if (!pornit) { power(true); }
             }
-            else if (temperatura > 22)
+            else if (temp > 22)
             {
                 if (pornit) { power(false); }
             }
+
+
         }
     }
 }

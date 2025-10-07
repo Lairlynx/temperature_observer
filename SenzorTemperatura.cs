@@ -1,40 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 namespace Observator
 {
     internal class SenzorTemperatura
     {
-        Calorifer abonat = null;
+    Calorifer[] abonati;
 
+        public SenzorTemperatura()
+        {
+            abonati = new Calorifer[5];
+        }
         public bool aboneaza(Calorifer calorifer)
         {
-            bool rez = false;
-            if (abonat == null)
+            for (int i = 0; i < abonati.Length; i++)
             {
-                abonat = calorifer;
-                rez = true;
+                if (abonati[i] == null)
+                {
+                    abonati[i] = calorifer;
+                    return true;
+                }
+                // prevenim dublarea abonarii
+                if (abonati[i] == calorifer)
+                {
+                    return false;
+                }
             }
-            return rez;
+            return false;
         }
 
         public bool dezaboneaza(Calorifer calorifer)
         {
-            bool rez = false;
-            if (abonat == null)
+            for (int i = 0; i < abonati.Length; i++)
             {
-                abonat = calorifer;
-                rez = true;
+                if (abonati[i] == calorifer)
+                {
+                    abonati[i] = null;
+                    return true;
+                }
             }
-            return rez;
+            return false;
         }
 
         public void inject(int temperatura)
         {
-            /*
-            if (abonat != null)
+            for (int i = 0; i < abonati.Length; i++)
             {
-                abonat.handler(temperatura);
+                abonati[i]?.handle(temperatura);
             }
-            */
-            abonat?.handler(temperatura);
         }
+
     }
 }
