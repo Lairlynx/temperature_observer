@@ -7,10 +7,12 @@
             Calorifer calorifer = new Calorifer("Sufragerie");
             Calorifer calorifer2 = new Calorifer("Bucatarie");
             SenzorTemperatura senzor = new SenzorTemperatura();
+            Termometru termometru = new Termometru();
 
             // 1. 
             senzor.aboneaza(calorifer);
             senzor.aboneaza(calorifer2);
+            senzor.aboneaza(termometru);
 
             // 2.
             senzor.inject(21);

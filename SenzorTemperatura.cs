@@ -6,50 +6,35 @@ using System.Threading.Tasks;
 
 namespace Observator
 {
-    internal class SenzorTemperatura
+    internal class SenzorTemperatura : Abonat
     {
-    Calorifer[] abonati;
+    List<Abonat> abonati;
 
         public SenzorTemperatura()
         {
-            abonati = new Calorifer[5];
+            abonati = new List<Abonat>();
         }
-        public bool aboneaza(Calorifer calorifer)
+        public bool aboneaza(Abonat abonat)
         {
-            for (int i = 0; i < abonati.Length; i++)
+            bool contains = abonati.Contains(abonat);
+            if (!contains)
             {
-                if (abonati[i] == null)
-                {
-                    abonati[i] = calorifer;
-                    return true;
-                }
-                // prevenim dublarea abonarii
-                if (abonati[i] == calorifer)
-                {
-                    return false;
-                }
+                abonati.Add(abonat);
             }
-            return false;
+            return !contains;
         }
 
-        public bool dezaboneaza(Calorifer calorifer)
+        public bool dezaboneaza(Abonat abonat)
         {
-            for (int i = 0; i < abonati.Length; i++)
-            {
-                if (abonati[i] == calorifer)
-                {
-                    abonati[i] = null;
-                    return true;
-                }
-            }
-            return false;
+            return abonati.Remove(abonat);
+
         }
 
         public void inject(int temperatura)
         {
-            for (int i = 0; i < abonati.Length; i++)
+            foreach (var abonat in abonati)
             {
-                abonati[i]?.handle(temperatura);
+                abonat.handle(temperatura);
             }
         }
 

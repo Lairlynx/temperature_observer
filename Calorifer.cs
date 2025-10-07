@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 namespace Observator
 {
     // mentine temp in [20, 22]
-    internal class Calorifer
+    internal class Calorifer : Abonat
     {
         bool pornit = false;
         string nume;
-        public Calorifer(string n) {nume = n;}
+        public Calorifer(string n = "no name") {nume = n; }
         private void power(bool on)
         {
             pornit = on;
             Console.WriteLine($"Caloriferul {nume} se {(on ? "porneste" : "opreste")}");
         }
 
-        public void handle(int temp)
+        public override void handle(int temp)
         {
 
             Console.WriteLine($"Caloriferul {nume} a primit temp {temp}");
