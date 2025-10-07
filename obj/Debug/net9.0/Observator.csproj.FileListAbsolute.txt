@@ -1,0 +1,14 @@
+c:\DEV_APPS\dotNET basics training\Observator\bin\Debug\net9.0\Observator.exe
+c:\DEV_APPS\dotNET basics training\Observator\bin\Debug\net9.0\Observator.deps.json
+c:\DEV_APPS\dotNET basics training\Observator\bin\Debug\net9.0\Observator.runtimeconfig.json
+c:\DEV_APPS\dotNET basics training\Observator\bin\Debug\net9.0\Observator.dll
+c:\DEV_APPS\dotNET basics training\Observator\bin\Debug\net9.0\Observator.pdb
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.GeneratedMSBuildEditorConfig.editorconfig
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.AssemblyInfoInputs.cache
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.AssemblyInfo.cs
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.csproj.CoreCompileInputs.cache
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.dll
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\refint\Observator.dll
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.pdb
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\Observator.genruntimeconfig.cache
+c:\DEV_APPS\dotNET basics training\Observator\obj\Debug\net9.0\ref\Observator.dll
