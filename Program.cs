@@ -6,7 +6,9 @@
         {
             Calorifer calorifer = new Calorifer("Sufragerie");
             Calorifer calorifer2 = new Calorifer("Bucatarie");
+
             SenzorTemperatura senzor = new SenzorTemperatura();
+
             Termometru termometru = new Termometru();
 
             // 1. 
@@ -22,8 +24,6 @@
             senzor.inject(21);
             senzor.inject(23);
             // ...
-
-
         }
     }
 }

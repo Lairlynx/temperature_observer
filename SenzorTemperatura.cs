@@ -34,7 +34,7 @@ namespace Observator
         {
             foreach (var abonat in abonati)
             {
-                abonat.handle(temperatura);
+                abonat.handle(temperatura); //polimorfism
             }
         }
 

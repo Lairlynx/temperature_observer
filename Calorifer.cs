@@ -31,8 +31,6 @@ namespace Observator
             {
                 if (pornit) { power(false); }
             }
-
-
         }
     }
 }
