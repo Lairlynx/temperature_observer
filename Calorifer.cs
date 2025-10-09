@@ -1,13 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Observator
 {
     // mentine temp in [20, 22]
-    internal class Calorifer : Abonat
+    internal class Calorifer
     {
         bool pornit = false;
         string nume;
@@ -18,7 +12,7 @@ namespace Observator
             Console.WriteLine($"Caloriferul {nume} se {(on ? "porneste" : "opreste")}");
         }
 
-        public override void handle(int temp)
+        public void handle(int temp)
         {
 
             Console.WriteLine($"Caloriferul {nume} a primit temp {temp}");

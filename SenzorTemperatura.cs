@@ -1,40 +1,27 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace Observator
 {
-    internal class SenzorTemperatura : Abonat
+    //Action<int> abonati;
+    delegate void CALLBACK(int temperatura);
+    
+    internal class SenzorTemperatura
     {
-    List<Abonat> abonati;
+        CALLBACK abonati;
 
-        public SenzorTemperatura()
+        public void aboneaza(CALLBACK abonat)
         {
-            abonati = new List<Abonat>();
-        }
-        public bool aboneaza(Abonat abonat)
-        {
-            bool contains = abonati.Contains(abonat);
-            if (!contains)
-            {
-                abonati.Add(abonat);
-            }
-            return !contains;
+            abonati += abonat;   
         }
 
-        public bool dezaboneaza(Abonat abonat)
+        public void dezaboneaza(CALLBACK abonat)
         {
-            return abonati.Remove(abonat);
-
+            abonati -= abonat;
         }
 
         public void inject(int temperatura)
         {
-            foreach (var abonat in abonati)
+            if (abonati != null)
             {
-                abonat.handle(temperatura); //polimorfism
+                abonati(temperatura);
             }
         }
 

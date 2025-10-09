@@ -1,8 +1,8 @@
 namespace Observator
 {
-    internal class Termometru : Abonat
+    internal class Termometru
     {
-        public override void handle(int temp)
+        public void afiseaza(int temp)
         {
             Console.WriteLine($"Termometru: temperatura este {temp}");
         }

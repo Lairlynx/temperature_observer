@@ -12,9 +12,9 @@
             Termometru termometru = new Termometru();
 
             // 1. 
-            senzor.aboneaza(calorifer);
-            senzor.aboneaza(calorifer2);
-            senzor.aboneaza(termometru);
+            senzor.aboneaza(calorifer.handle);
+            senzor.aboneaza(calorifer2.handle);
+            senzor.aboneaza(termometru.afiseaza);
 
             // 2.
             senzor.inject(21);
